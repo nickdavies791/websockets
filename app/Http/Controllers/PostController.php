@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\NewPostCreated;
 use App\Post;
 use Illuminate\Http\Request;
 
@@ -14,7 +15,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        //
+        return Post::latest()->get();
     }
 
     /**
@@ -35,10 +36,11 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        $posts = (new Post)->create([
+        $post = (new Post)->create([
         	'title' => $request->title,
 			'body' => $request->body
 		]);
+        event(new NewPostCreated($post));
         return redirect('home');
     }
 
