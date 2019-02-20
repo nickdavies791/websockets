@@ -1,4 +1,5 @@
-#Laravel Websockets
+# Laravel Websockets
+
 A simple websockets example. 
 
 A user creates a new post and the post is instantly shown to any other logged in users without the need for refresh.
