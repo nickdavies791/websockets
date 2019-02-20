@@ -7,4 +7,4 @@ This example uses [beyondcode/laravel-websockets](https://github.com/beyondcode/
 
 ### Demo
 
-[Demo](/screenshots/laravel-websockets-demo.gif)
+![Demo](/screenshots/laravel-websockets-demo.gif)
